@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Form from './components/Form';
 
 function App() {
+
+  const [appmts, saveAppmts] = useState([]);
+
+  const createAppmt = appmt =>{
+    saveAppmts([...appmts, appmt]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <div className="one-half column">
+          <Form
+            createAppmt={createAppmt}
+          />
+        </div>
+        <div className="one-half column">
+          2
+        </div>
+      </div>
+    </>
   );
 }
 
