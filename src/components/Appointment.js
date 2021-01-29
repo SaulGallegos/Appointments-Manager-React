@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const Appointment = ({appmt, deleteAppmt}) => {
 
@@ -18,6 +18,11 @@ const Appointment = ({appmt, deleteAppmt}) => {
                >Eliminar &times;</button>
           </div>
      );
+}
+
+Appointment.propTypes = {
+     appmt: PropTypes.object.isRequired,
+     deleteAppmt: PropTypes.func.isRequired
 }
  
 export default Appointment;

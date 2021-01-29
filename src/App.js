@@ -12,6 +12,8 @@ function App() {
   const [appmts, saveAppmts] = useState(initialAppmts);
 
   useEffect(() => {
+    let initialAppmts = JSON.parse(localStorage.getItem('appmts'));
+
     if(initialAppmts){
       localStorage.setItem('appmts', JSON.stringify(appmts));
     } else {

@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import uuid from 'react-uuid'
+import PropTypes from 'prop-types';
 
 const Form = ({createAppmt}) => {
 
@@ -107,6 +108,10 @@ const Form = ({createAppmt}) => {
           </form>
           </>
      );
+}
+
+Form.propTypes = {
+     createAppmt: PropTypes.func.isRequired
 }
  
 export default Form;
